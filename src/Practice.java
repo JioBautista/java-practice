@@ -13,8 +13,13 @@ public class Practice {
             System.out.println("This person is an employee to " + companyName);
             System.out.println(firstName + " " + lastName + " " + age + " " + employeeNum);
             System.out.println("Company: " + companyName);
+            String[] positions = {"Keyholder", "Cashier", "Assistant Manager", "Store Manager"};
+            for (int i = 0; i < positions.length; i++) {
+                System.out.println("This employees position is: " + positions[i]);
+            }
         } else {
             System.out.println("This person is NOT an employee to " + companyName);
         }
+
     }
 }
