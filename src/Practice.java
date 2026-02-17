@@ -1,25 +1,28 @@
 public class Practice {
+    public static void welcomeMessage() {
+        System.out.println("WELCOME TO ADP");
+    }
+
+    public static void exitMessage() {
+        System.out.println("This person does not belong in the company. Try again");
+    }
+
+    public static void createEmployee(String fname, String lname) {
+        String firstName = fname;
+        String lastName = lname;
+        String fullName = firstName + " " + lastName;
+        System.out.println("This employee has been added to the system: " + fullName);
+    }
+
+    //    Method overload
+    public static void createEmployee(int id) {
+        int employeeID = id;
+        String message = "HELLO";
+        System.out.println("Employee: " + employeeID);
+    }
+
     public static void main(String[] args) {
-//        Non-primitive data types
-        String firstName = "Jio";
-        String lastName = "Pacho";
-//        Primitive data-types
-        int age = 32;
-        final int employeeNum = 235002350;
-        var companyName = "Rexall";
-        boolean isEmployee = true;
-
-        if (isEmployee) {
-            System.out.println("This person is an employee to " + companyName);
-            System.out.println(firstName + " " + lastName + " " + age + " " + employeeNum);
-            System.out.println("Company: " + companyName);
-            String[] positions = {"Keyholder", "Cashier", "Assistant Manager", "Store Manager"};
-            for (int i = 0; i < positions.length; i++) {
-                System.out.println("This employees position is: " + positions[i]);
-            }
-        } else {
-            System.out.println("This person is NOT an employee to " + companyName);
-        }
-
+        createEmployee("Jio", "Pacho");
+        createEmployee(325002350);
     }
 }
